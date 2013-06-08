@@ -36,8 +36,25 @@ public class coord {
 				
 			}
 		}// loops!
-		
+
 		msg("Chegamos no final sem erros!!");
+		System.out.println(""); //Printa no console todas as estrelas.
+		id=0;
+		
+		for(int linha=0;linha<matriz.length;linha++){
+			for(int coluna=0;coluna<4;coluna++){
+				if(coluna==0){// ID da estrela
+					System.out.println("ID = "+matriz[linha][coluna]);
+					id++;					
+				}else if(coluna==1){// Coordenada X
+					System.out.println("X = "+matriz[linha][coluna]);
+				}else if(coluna==2){// Coordenada Y
+					System.out.println("Y = "+matriz[linha][coluna]);
+				}else if(coluna==3){// Coordenada Z
+					System.out.println("Z = "+matriz[linha][coluna]);
+				}
+			}
+		}// loops!
 		
 	}//main
 	
