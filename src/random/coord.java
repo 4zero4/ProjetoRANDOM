@@ -47,7 +47,7 @@ public class coord {
 	public static void CSVPrinter(){
 		
 		try{
-			FileWriter writer = new FileWriter("test.csv");
+			FileWriter writer = new FileWriter("test.txt");
 			for(int linha = 0; linha < matriz.length; linha++){
 				for (int coluna = 0; coluna<matriz[0].length; coluna++){
 					writer.append(matriz[linha][coluna]+"");
