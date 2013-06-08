@@ -10,24 +10,46 @@ public class coord {
 	public static double[][] matriz;
 	
 	public static void main(String[] args){
-		msg("Programa de criação de coordenadas utilizando\nalgoritimos pseudo-randomicos");
-		double n = entrDouble("Entre com o número de estrelas a serem geradas");
-		matriz(matriz,(int)n);
+		int id = 1;//ID das estrelas
+		double xAnterior = seed;
 		
-		for(int c=0;c<matriz[0].length;c++){
-			for(int l=0;l<matriz.length;l++){
-				//matriz[l][c] = 
+		msg("Programa de criação de coordenadas utilizando\nalgoritimos pseudo-randomicos");
+		int n = (int)entrDouble("Entre com o número de estrelas a serem geradas");
+		
+		
+		
+		matriz = new double[n][4];
+		
+		
+		
+		for(int linha=0;linha<matriz.length;linha++){
+			for(int coluna=0;coluna<4;coluna++){
+				if(coluna==0){// ID da estrela
+					matriz[linha][coluna]=id;
+					id++;					
+				}else if(coluna==1){// Coordenada X
+					matriz[linha][coluna]=seeder(xAnterior);
+					xAnterior = matriz[linha][coluna];
+				}else if(coluna==2){// Coordenada Y
+					matriz[linha][coluna]=seeder(xAnterior);
+					xAnterior = matriz[linha][coluna];
+				}else if(coluna==3){// Coordenada Z
+					matriz[linha][coluna]=seeder(xAnterior);
+					xAnterior = matriz[linha][coluna];
+				}
+				
 			}
-		}
+		}// loops!
+		
+		msg("Chegamos no final sem erros!!");
 		
 	}//main
 	
 	//==============================================================
-	public static void matriz(double v[][],int n){
-		v = new double[n][4];
-	}//matriz
 	
-	public static double seeder(double Xi){
+	public static void CSVPrinter(double[][] v){}	
+	
+	public static double seeder(double Xi){//Metodo seeder
 		double Xf;
 		Xf = (a*Xi+b)%m;
 		Xf = (int)(Xf/dNom);
