@@ -1,4 +1,4 @@
-//commit by Omella
+//Comit by Qirion!!
 
 package random;
 import javax.swing.*;
