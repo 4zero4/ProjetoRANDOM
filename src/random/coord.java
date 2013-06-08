@@ -1,7 +1,8 @@
 package random;
-import java.io.FileWriter;
-
 import javax.swing.*;
+import utils.CSVPrinter;
+
+
 public class coord {
 	//Xf=(a*Xi+b)%m;
 	public static double seed = 1;
@@ -36,30 +37,9 @@ public class coord {
 				}
 			}
 		}// loops!
-		CSVPrinter(matriz);
+		CSVPrinter csv = new CSVPrinter(matriz);
 	}//main
 	//==============================================================
-	
-	public static void CSVPrinter(double[][] v){
-		int j=0;
-		int i=0;
-		try{
-			FileWriter writer = new FileWriter("test.csv");
-			for(; i < v.length; i++){
-				for (; j<v[0].length; j++){
-					writer.append(v[i][j]+"");
-					writer.append(',');
-				}
-				writer.append(v[i][j-1]+"");
-				writer.append('\n');
-				writer.flush();
-			}
-			writer.close();
-		}
-		catch(Exception e){
-			e.printStackTrace();
-		}
-	}//CSVPrinter
 	
 	public static double seeder(double Xi){//Metodo seeder
 		double Xf;
