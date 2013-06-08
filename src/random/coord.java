@@ -6,7 +6,7 @@ public class coord {
 	public static final double a = 179424361;
 	public static final double b = 11;
 	public static final double m = 1000000000;
-	public static double dNom = 100000;
+	public static double dNom = 1;
 	public static double[][] matriz;
 	
 	public static void main(String[] args){
