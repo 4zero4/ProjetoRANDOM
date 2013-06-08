@@ -38,6 +38,7 @@ public class coord {
 			}
 		}// loops!
 		CSVPrinter csv = new CSVPrinter(matriz);
+		csv.createCSV("test.csv");
 	}//main
 	//==============================================================
 	
