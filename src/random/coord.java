@@ -1,3 +1,5 @@
+//commit by Omella
+
 package random;
 import javax.swing.*;
 public class coord {
