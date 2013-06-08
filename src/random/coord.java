@@ -1,5 +1,8 @@
 package random;
+
 import javax.swing.*;
+import utils.CSVPrinter;
+
 public class coord {
 	//Xf=(a*Xi+b)%m;
 	public static double seed = 1;
@@ -36,6 +39,9 @@ public class coord {
 				
 			}
 		}// loops!
+		
+		CSVPrinter csv = new CSVPrinter(matriz);
+		csv.createCSV("test.csv");
 		
 	}//main
 	
