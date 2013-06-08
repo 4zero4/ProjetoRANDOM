@@ -64,14 +64,12 @@ public class coord {
 	
 	public static void printCoords(double matriz[][]){
 		System.out.println(""); //Printa no console todas as estrelas.
-		int id=1;
 		
 		for(int linha=0;linha<matriz.length;linha++){
 			for(int coluna=0;coluna<4;coluna++){
 				if(coluna==0){// ID da estrela
 					System.out.printf("ID =%15.1f",matriz[linha][coluna]);
-					System.out.print("   ");
-					id++;					
+					System.out.print("   ");					
 				}else if(coluna==1){// Coordenada X
 					System.out.printf("X = %15.1f",matriz[linha][coluna]);
 					System.out.print("   ");
