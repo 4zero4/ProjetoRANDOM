@@ -44,14 +44,18 @@ public class coord {
 		for(int linha=0;linha<matriz.length;linha++){
 			for(int coluna=0;coluna<4;coluna++){
 				if(coluna==0){// ID da estrela
-					System.out.println("ID = "+matriz[linha][coluna]);
+					System.out.printf("ID =%6.1f",matriz[linha][coluna]);
+					System.out.print("   ");
 					id++;					
 				}else if(coluna==1){// Coordenada X
-					System.out.println("X = "+matriz[linha][coluna]);
+					System.out.printf("X = %6.1f",matriz[linha][coluna]);
+					System.out.print("   ");
 				}else if(coluna==2){// Coordenada Y
-					System.out.println("Y = "+matriz[linha][coluna]);
+					System.out.printf("Y = %6.1f",matriz[linha][coluna]);
+					System.out.print("   ");
 				}else if(coluna==3){// Coordenada Z
-					System.out.println("Z = "+matriz[linha][coluna]);
+					System.out.printf("Z = %6.1f",matriz[linha][coluna]);
+					System.out.println();
 				}
 			}
 		}// loops!
