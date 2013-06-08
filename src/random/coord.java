@@ -47,8 +47,9 @@ public class coord {
 	
 	//==============================================================
 	
+	public static void CSVPrinter(double[][] v){}	
 	
-	public static double seeder(double Xi){
+	public static double seeder(double Xi){//Metodo seeder
 		double Xf;
 		Xf = (a*Xi+b)%m;
 		Xf = (int)(Xf/dNom);
