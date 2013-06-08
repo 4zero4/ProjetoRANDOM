@@ -1,5 +1,3 @@
-//Comit by Qirion!!
-
 package random;
 import javax.swing.*;
 public class coord {
@@ -12,18 +10,13 @@ public class coord {
 	public static double[][] matriz;
 	
 	public static void main(String[] args){
+		
 		int id = 1;//ID das estrelas
 		double xAnterior = seed;
-		
+		int n;//Número de estrelas a serem criadas
 		msg("Programa de criação de coordenadas utilizando\nalgoritimos pseudo-randomicos");
-		int n = (int)entrDouble("Entre com o número de estrelas a serem geradas");
-		
-		
-		
+		n = (int)entrDouble("Entre com o número de estrelas a serem geradas");
 		matriz = new double[n][4];
-		
-		
-		
 		for(int linha=0;linha<matriz.length;linha++){
 			for(int coluna=0;coluna<4;coluna++){
 				if(coluna==0){// ID da estrela
@@ -39,14 +32,9 @@ public class coord {
 					matriz[linha][coluna]=seeder(xAnterior);
 					xAnterior = matriz[linha][coluna];
 				}
-				
 			}
-		}// loops!
-		
-		msg("Chegamos no final sem erros!!");
-		
+		}// loops!		
 	}//main
-	
 	//==============================================================
 	
 	public static void CSVPrinter(double[][] v){}	
