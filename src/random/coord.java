@@ -1,13 +1,11 @@
-//commit by Omella
-
 package random;
 import javax.swing.*;
 public class coord {
 	//Xf=(a*Xi+b)%m;
 	public static double seed = 1;
-	public static double a = 179424361;
-	public static double b = 11;
-	public static double m = 1000000000;
+	public static final double a = 179424361;
+	public static final double b = 11;
+	public static final double m = 1000000000;
 	public static double dNom = 100000;
 	public static double[][] matriz;
 	
@@ -18,11 +16,7 @@ public class coord {
 		msg("Programa de criação de coordenadas utilizando\nalgoritimos pseudo-randomicos");
 		int n = (int)entrDouble("Entre com o número de estrelas a serem geradas");
 		
-		
-		
 		matriz = new double[n][4];
-		
-		
 		
 		for(int linha=0;linha<matriz.length;linha++){
 			for(int coluna=0;coluna<4;coluna++){
