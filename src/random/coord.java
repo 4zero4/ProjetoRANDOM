@@ -37,8 +37,6 @@ public class coord {
 			}
 		}// loops!
 		
-		msg("Chegamos no final sem erros!!");
-		
 	}//main
 	
 	//==============================================================
