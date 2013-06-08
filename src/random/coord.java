@@ -38,27 +38,8 @@ public class coord {
 		}// loops!
 
 		msg("Chegamos no final sem erros!!");
-		System.out.println(""); //Printa no console todas as estrelas.
-		id=0;
+		printCoords(matriz);
 		
-		for(int linha=0;linha<matriz.length;linha++){
-			for(int coluna=0;coluna<4;coluna++){
-				if(coluna==0){// ID da estrela
-					System.out.printf("ID =%6.1f",matriz[linha][coluna]);
-					System.out.print("   ");
-					id++;					
-				}else if(coluna==1){// Coordenada X
-					System.out.printf("X = %6.1f",matriz[linha][coluna]);
-					System.out.print("   ");
-				}else if(coluna==2){// Coordenada Y
-					System.out.printf("Y = %6.1f",matriz[linha][coluna]);
-					System.out.print("   ");
-				}else if(coluna==3){// Coordenada Z
-					System.out.printf("Z = %6.1f",matriz[linha][coluna]);
-					System.out.println();
-				}
-			}
-		}// loops!
 		
 	}//main
 	
@@ -79,6 +60,30 @@ public class coord {
 	
 	public static double entrDouble(String msg){
 		return Double.parseDouble(JOptionPane.showInputDialog(msg));
+	}
+	
+	public static void printCoords(double matriz[][]){
+		System.out.println(""); //Printa no console todas as estrelas.
+		int id=1;
+		
+		for(int linha=0;linha<matriz.length;linha++){
+			for(int coluna=0;coluna<4;coluna++){
+				if(coluna==0){// ID da estrela
+					System.out.printf("ID =%15.1f",matriz[linha][coluna]);
+					System.out.print("   ");
+					id++;					
+				}else if(coluna==1){// Coordenada X
+					System.out.printf("X = %15.1f",matriz[linha][coluna]);
+					System.out.print("   ");
+				}else if(coluna==2){// Coordenada Y
+					System.out.printf("Y = %15.1f",matriz[linha][coluna]);
+					System.out.print("   ");
+				}else if(coluna==3){// Coordenada Z
+					System.out.printf("Z = %15.1f",matriz[linha][coluna]);
+					System.out.println();
+				}
+			}
+		}// loops!
 	}
 	
 }
