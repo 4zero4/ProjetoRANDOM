@@ -45,8 +45,23 @@ public class coord {
 		
 		DebugTools.printStars(matriz);
 		
+		msg("Criando CSV");
+		
 		CSVPrinter csv = new CSVPrinter(matriz);
-		csv.createCSV("test.csv");
+		csv.createCSV("test.csv");	
+
+
+		msg("CSV Criado!");
+	
+		
+		int escolha = 0;
+		do{
+			escolha = (int)entrDouble("Deseja exibir coordenadas?\nSim-1\nNão-2");
+		}while(escolha <1 || escolha >2);
+		
+		if(escolha==1){
+			DebugTools.printStars(matriz);
+		}
 		
 	}//main
 	
