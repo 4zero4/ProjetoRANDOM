@@ -2,6 +2,7 @@ package random;
 
 import javax.swing.*;
 import utils.CSVPrinter;
+import utils.DebugTools;
 
 public class coord {
 	//Xf=(a*Xi+b)%m;
@@ -9,7 +10,9 @@ public class coord {
 	public static final double a = 179424361;
 	public static final double b = 11;
 	public static final double m = 1000000000;
-	public static double dNom = 100000;
+		//Maximum value for x, y and z. Larger values result in smaller densities.
+	
+	public static double dNom = 1;
 	public static double[][] matriz;
 	
 	public static void main(String[] args){
@@ -39,6 +42,8 @@ public class coord {
 				
 			}
 		}// loops!
+		
+		DebugTools.printStars(matriz);
 		
 		CSVPrinter csv = new CSVPrinter(matriz);
 		csv.createCSV("test.csv");

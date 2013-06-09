@@ -1,34 +1,36 @@
 package utils;
 
-import java.io.FileWriter;
+//General purpose class for all debugging tools for the project
 
 public class DebugTools{
-	private int j=0;
-	private int i=0;
-	private double[][] v;
-	
-	//Constructor method
-	public DebugTools(double[][] argv){
-		v=argv;
-	}
-	
-	public void createCSV(String path){
-		try{
-			FileWriter writer = new FileWriter("test.csv");
-			for(; i < v.length; i++){
-				for (; j<v[0].length; j++){
-					writer.append(v[i][j]+"");
-					writer.append(',');
+
+
+	public static void printStars(double stars[][]){
+
+		//Prints the ID's and coordinates of generated stars in "stars" matrix
+		//Input must be 
+		
+		for(int linha=0;linha<stars.length;linha++){
+			for(int coluna=0;coluna<4;coluna++){
+				
+				if(coluna==0){// ID da estrela
+					System.out.printf("ID =%15.1f",stars[linha][coluna]);
+					System.out.print(" ");	
+					
+				}else if(coluna==1){// Coordenada X
+					System.out.printf("X = %15.1f",stars[linha][coluna]);
+					System.out.print(" ");
+					
+				}else if(coluna==2){// Coordenada Y
+					System.out.printf("Y = %15.1f",stars[linha][coluna]);
+					System.out.print(" ");
+					
+				}else if(coluna==3){// Coordenada Z
+					System.out.printf("Z = %15.1f",stars[linha][coluna]);
+					System.out.println();
 				}
-				writer.append(v[i][j-1]+"");
-				writer.append('\n');
-				writer.flush();
 			}
-			writer.close();
 		}
-		catch(Exception e){
-			e.printStackTrace();
-		}
+	}//printStars
 	
-	}
-}
+}//DebugTools
