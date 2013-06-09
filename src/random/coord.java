@@ -1,6 +1,5 @@
 package random;
 import java.io.FileWriter;
-
 import javax.swing.*;
 public class coord {
 	//Xf=(a*Xi+b)%m;
@@ -37,7 +36,17 @@ public class coord {
 				}
 			}
 		}// loops!
+		
+		msg("Criando CSV");
 		CSVPrinter();
+		msg("CSV Criado!");
+		int escolha = 0;
+		do{
+			escolha = (int)entrDouble("Deseja exibir coordenadas?\nSim-1\nNão-2");
+		}while(escolha <1 || escolha >2);
+		if(escolha==1){
+			printCoords(matriz);
+		}
 		msg("Pronto!");
 	}//main
 	//==============================================================
@@ -50,7 +59,7 @@ public class coord {
 			FileWriter writer = new FileWriter("test.csv");
 			for(int linha = 0; linha < matriz.length; linha++){
 				for (int coluna = 0; coluna<matriz[0].length; coluna++){
-					writer.append("0."+(int)matriz[linha][coluna]+"");
+					writer.append((int)matriz[linha][coluna]+"");
 					writer.append(',');
 				}
 				writer.append('\n');
@@ -61,6 +70,30 @@ public class coord {
 			e.printStackTrace();
 		}
 	}//CSVPrinter
+	
+	public static void printCoords(double m[][]){
+		System.out.println(""); //Printa no console todas as estrelas.
+		//int id=1;
+		
+		for(int linha=0;linha<matriz.length;linha++){
+			for(int coluna=0;coluna<4;coluna++){
+				if(coluna==0){// ID da estrela
+					System.out.printf("ID =%15.1f",m[linha][coluna]);
+					System.out.print("   ");
+					//id++;					
+				}else if(coluna==1){// Coordenada X
+					System.out.printf("X = %15.1f",m[linha][coluna]);
+					System.out.print("   ");
+				}else if(coluna==2){// Coordenada Y
+					System.out.printf("Y = %15.1f",m[linha][coluna]);
+					System.out.print("   ");
+				}else if(coluna==3){// Coordenada Z
+					System.out.printf("Z = %15.1f",m[linha][coluna]);
+					System.out.println();
+				}
+			}
+		}// loops!
+	}//printCoords
 	
 	public static double seeder(double Xi){//Metodo seeder
 		double Xf;
